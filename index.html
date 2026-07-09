@@ -1354,7 +1354,10 @@
         </footer>
     </div>
 
-<div id="view-sdr" class="w-full max-w-7xl flex flex-col items-center space-y-24 hidden pt-0 mt-0">
+<!-- ========================================== -->
+    <!-- VIEW: SDR RESOURCES (UPDATED MANIFEST)     -->
+    <!-- ========================================== -->
+    <div id="view-sdr" class="w-full max-w-7xl flex flex-col items-center space-y-24 hidden pt-0 mt-0">
         
         <header class="w-full border-b border-slate-800 bg-[#0C1222]/80 backdrop-blur-md rounded-2xl px-6 md:px-8 py-4 flex justify-between items-center sticky top-4 z-50 shadow-lg shadow-black/30">
             <div class="flex items-center space-x-3">
@@ -1375,43 +1378,88 @@
 
         <section class="relative w-full rounded-3xl bg-slate-50 border border-slate-200 p-8 md:p-14 overflow-hidden shadow-xl z-10 text-slate-950">
             <div class="grid lg:grid-cols-12 gap-12 items-center relative z-10">
-                <div class="lg:col-span-7 space-y-6 text-left">
+                <div class="lg:col-span-8 space-y-6 text-left">
                     <div class="inline-flex items-center gap-2 bg-slate-200/80 border border-slate-300 px-3.5 py-1.5 rounded-full">
-                        <span class="h-2 w-2 rounded-full bg-slate-800 animate-pulse"></span>
-                        <span class="text-[10px] font-mono font-bold tracking-widest text-slate-700 uppercase">Outbound Enablement Vault</span>
+                        <span class="h-2 w-2 rounded-full bg-slate-900 animate-pulse"></span>
+                        <span class="text-[10px] font-mono font-bold tracking-widest text-slate-700 uppercase">Outbound Enablement Matrix</span>
                     </div>
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight uppercase leading-none font-heading">
                         SDR Resources<span class="text-teal-600">.</span>
                     </h1>
-                    <p class="text-slate-600 text-base leading-relaxed max-w-xl font-normal">
-                        Equipping your pipeline building with high-conversion frameworks. Access outbound cold tracking scripts, sequence templates, and customer discovery parameters.
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl font-normal">
+                        Your playbook for pipeline generation. Access the scripts, tools, and tactical guides you need to master effective outreach, bypass gatekeepers, and drive the qualified meetings that fuel our growth.
                     </p>
                 </div>
             </div>
         </section>
 
         <div class="w-full grid lg:grid-cols-12 gap-12 items-start relative z-10 text-left mt-10">
+            <!-- Sidebar Navigation -->
             <aside class="lg:col-span-3 bg-[#0C1222]/50 border border-slate-800/60 p-4 rounded-xl sticky-sidebar hidden lg:block shadow-xl">
+                <div class="flex justify-between items-center mb-4 px-1 border-b border-slate-800 pb-2">
+                    <span class="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-tight block">Navigation</span>
+                    <div class="h-5 w-2 bg-slate-950 border border-slate-800 rounded-full relative flex justify-center p-0.5">
+                        <div class="w-1 h-1 bg-[#00F5D4] rounded-full scroll-dot-anim"></div>
+                    </div>
+                </div>
                 <ul class="space-y-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 font-heading">
-                    <li><button onclick="document.getElementById('sdr-scripts-sec').scrollIntoView({behavior: 'smooth'})" class="w-full p-2 text-left hover:text-white"><span class="text-[#00F5D4] mr-1">▪</span> Pitch Scripts</button></li>
-                    <li><button onclick="document.getElementById('sdr-sequence-sec').scrollIntoView({behavior: 'smooth'})" class="w-full p-2 text-left hover:text-white"><span class="text-[#00F5D4] mr-1">▪</span> Cold Sequences</button></li>
+                    <li><button onclick="document.getElementById('sdr-ref-card-sec').scrollIntoView({behavior: 'smooth'})" class="w-full p-2 text-left hover:text-white flex items-center gap-2"><span class="text-teal-400">01</span> <span>Reference Card</span></button></li>
+                    <li><button onclick="document.getElementById('sdr-scripts-sec').scrollIntoView({behavior: 'smooth'})" class="w-full p-2 text-left hover:text-white flex items-center gap-2"><span class="text-blue-500">02</span> <span>SDR Scripts</span></button></li>
+                    <li><button onclick="document.getElementById('sdr-generator-sec').scrollIntoView({behavior: 'smooth'})" class="w-full p-2 text-left hover:text-white flex items-center gap-2"><span class="text-purple-400">03</span> <span>Social Generator</span></button></li>
                 </ul>
             </aside>
 
-            <div class="lg:col-span-9 space-y-12 w-full">
-                <section id="sdr-scripts-sec" class="border-l-4 border-l-[#00F5D4] bg-[#0C1222]/30 pl-6 md:pl-10 space-y-6">
-                    <h3 class="text-2xl font-bold text-white font-heading tracking-wide uppercase">Outbound Tracking Scripts</h3>
-                    <div class="bg-slate-950/40 border border-slate-800/80 p-6 rounded-2xl font-sans font-light text-slate-200 text-sm leading-relaxed">
-                        <p class="font-bold text-[#00F5D4] mb-2 font-mono">Example Value Prop Script:</p>
-                        <p class="italic text-slate-400">"Hi [First Name], noticed you're overseeing E&C at [Company]. Most healthcare organizations we partner with are struggling to lower substantiation velocities because of rigid platform models. We tackle this dynamically. Do you have 5 minutes next Tuesday?"</p>
+            <!-- Resource Center Container -->
+            <div class="lg:col-span-9 space-y-24 w-full">
+                
+                <!-- SECTION 1: ANTI-RETALIATION REFERENCE CARD -->
+                <section id="sdr-ref-card-sec" class="border-l-4 border-l-[#00F5D4] bg-[#0C1222]/30 pl-6 md:pl-10 space-y-6">
+                    <div class="space-y-1">
+                        <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-widest block">Core Training Enablement</span>
+                        <h3 class="text-2xl font-bold text-white font-heading tracking-wide uppercase">Anti-Retaliation Reference Card</h3>
+                    </div>
+                    <p class="text-slate-300 text-sm font-light leading-relaxed max-w-xl">
+                        Review high-impact reference slides mapped directly to core risk management definitions and baseline program mechanics.
+                    </p>
+                    <div class="pt-2">
+                        <a href="https://docs.google.com/presentation/d/1yEo_fKKXIEDCG8ijpRQ7BYZO7QK2LV1E0mWc5nhA8M4/edit?slide=id.SLIDES_API1943788862_0#slide=id.SLIDES_API1943788862_0" target="_blank" class="block w-full text-center py-4 bg-[#0C1222] hover:bg-slate-900 border border-slate-800 hover:border-[#00F5D4]/40 text-[#00F5D4] font-bold font-mono text-xs uppercase tracking-widest rounded-xl shadow-lg transition-all">
+                            Quick Reference Guides ↗
+                        </a>
                     </div>
                 </section>
 
-                <section id="sdr-sequence-sec" class="border-l-4 border-l-blue-500 bg-[#0C1222]/30 pl-6 md:pl-10 space-y-6">
-                    <h3 class="text-2xl font-bold text-white font-heading tracking-wide uppercase">Cold Sequencing Copy Templates</h3>
-                    <p class="text-slate-300 text-sm font-light">Access active sequences designed to bypass gatekeepers and strike direct target motivation alignment hooks.</p>
-                    <a href="#" class="block w-full text-center py-3.5 border border-blue-500/40 bg-blue-500/5 text-blue-400 font-mono text-xs uppercase font-bold tracking-widest rounded-xl shadow-md">Open Sequence Playbook ↗</a>
+                <!-- SECTION 2: ANTI-RETALIATION SDR SCRIPTS -->
+                <section id="sdr-scripts-sec" class="border-l-4 border-l-blue-500 bg-[#0C1222]/30 pl-6 md:pl-10 space-y-6">
+                    <div class="space-y-1">
+                        <span class="text-xs font-mono font-bold text-blue-300 uppercase tracking-widest block">Outbound Pitch Frameworks</span>
+                        <h3 class="text-2xl font-bold text-white font-heading tracking-wide uppercase">Anti-Retaliation SDR Scripts</h3>
+                    </div>
+                    <p class="text-slate-300 text-sm font-light leading-relaxed max-w-xl">
+                        Deploy verified telephone blueprints and sequencing conversation points optimized specifically around whistleblower safety strategies.
+                    </p>
+                    <div class="pt-2">
+                        <a href="https://docs.google.com/document/d/1tEx0ZSo3tvPgpoYTCHYEvhHot6IV7bNOj1EpPyAJc9c/edit?tab=t.2jj1e4f8o223#heading=h.9eq7gmr751um" target="_blank" class="block w-full text-center py-4 border border-blue-500/40 bg-blue-500/5 text-blue-400 hover:bg-blue-500 hover:text-white font-mono text-xs uppercase font-bold tracking-widest rounded-xl transition-all shadow-md">
+                            Cold Call Scripts ↗
+                        </a>
+                    </div>
                 </section>
+
+                <!-- SECTION 3: SOCIAL POST GENERATOR -->
+                <section id="sdr-generator-sec" class="border-l-4 border-l-purple-500 bg-[#0C1222]/30 pl-6 md:pl-10 space-y-6">
+                    <div class="space-y-1">
+                        <span class="text-xs font-mono font-bold text-purple-300 uppercase tracking-widest block">AI Automation Toolkit</span>
+                        <h3 class="text-2xl font-bold text-white font-heading tracking-wide uppercase">Try the Social Post Generator</h3>
+                    </div>
+                    <div class="bg-slate-950/40 border border-slate-800/80 p-6 rounded-2xl font-sans font-light text-slate-200 text-sm leading-relaxed max-w-3xl">
+                        This AI Gem has already been fed knowledge about Ethico and our products. It also contains a list of links to product collateral. Try using the generator to create posts you can use on LinkedIn!
+                    </div>
+                    <div class="pt-2">
+                        <a href="https://gemini.google.com/gem/10aHv9_ueMd_l5RNWyE_vbLMQgUOiIzlH?usp=sharing" target="_blank" class="block w-full text-center py-4 bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-500 hover:to-indigo-600 text-white font-bold font-mono text-xs uppercase tracking-widest rounded-xl shadow-lg transition-all border border-purple-500/30">
+                            Try The Generator Here ↗
+                        </a>
+                    </div>
+                </section>
+
             </div>
         </div>
     </div>
