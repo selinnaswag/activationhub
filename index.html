@@ -2346,30 +2346,42 @@
             }
             document.getElementById('navigator-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-
-        const marketingBtn = document.getElementById('marketingMenuBtn');
+const marketingBtn = document.getElementById('marketingMenuBtn');
         const marketingDropdown = document.getElementById('marketingMenuDropdown');
         const teamBtn = document.getElementById('teamMenuBtn');
         const teamDropdown = document.getElementById('teamMenuDropdown');
+        const coreBtn = document.getElementById('coreMenuBtn'); // <-- Registers button link
+        const coreDropdown = document.getElementById('coreMenuDropdown'); // <-- Registers menu element
 
         // Toggle Marketing Menu
         marketingBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            teamDropdown.classList.add('hidden'); // Close team menu if open
+            teamDropdown.classList.add('hidden');
+            coreDropdown.classList.add('hidden'); // Closes core products menu
             marketingDropdown.classList.toggle('hidden');
         });
 
         // Toggle Team Menu
         teamBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            marketingDropdown.classList.add('hidden'); // Close marketing menu if open
+            marketingDropdown.classList.add('hidden');
+            coreDropdown.classList.add('hidden'); // Closes core products menu
             teamDropdown.classList.toggle('hidden');
+        });
+
+        // Toggle Core Products Menu (ADD THIS BLOCK)
+        coreBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            marketingDropdown.classList.add('hidden');
+            teamDropdown.classList.add('hidden');
+            coreDropdown.classList.toggle('hidden'); // Triggers open/close state
         });
 
         // Click anywhere else to close open menus
         document.addEventListener('click', () => {
             marketingDropdown.classList.add('hidden');
             teamDropdown.classList.add('hidden');
+            coreDropdown.classList.add('hidden'); // Closes core products layout
         });
     </script>
 </body>
