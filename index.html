@@ -86,12 +86,14 @@
 
     <div id="view-homepage" class="w-full max-w-7xl flex flex-col items-center space-y-16 block">
         
-        <header class="w-full sticky top-4 z-50">
-            <div class="max-w-4xl mx-auto border border-slate-800 bg-[#0C1222]/80 backdrop-blur-md rounded-2xl px-4 lg:px-6 py-3.5 flex justify-between items-center shadow-lg shadow-black/30">
+<header class="w-full sticky top-4 z-50">
+            <!-- Increased maximum width to max-w-5xl and tracking padding to px-8 for maximum breathing room -->
+            <div class="max-w-5xl mx-auto border border-slate-800 bg-[#0C1222]/80 backdrop-blur-md rounded-2xl px-6 md:px-8 py-3.5 flex justify-between items-center shadow-lg shadow-black/30 gap-8">
                 <div class="flex items-center space-x-3 flex-shrink-0">
                     <span class="text-xl font-bold tracking-tight text-white font-heading uppercase">ethico<span class="text-[#00F5D4]">.</span></span>
                 </div>
-                <nav class="hidden md:flex items-center space-x-5 text-[11px] font-bold tracking-wider text-slate-400 font-heading">
+                <!-- Added horizontal space utility space-x-8 to widen layout separation naturally -->
+                <nav class="hidden md:flex items-center space-x-8 text-[11px] font-bold tracking-wider text-slate-400 font-heading flex-grow justify-center">
                     <button onclick="navigateToView('essentials')" class="hover:text-white transition-colors">Ethico Essentials</button>
                     
                     <div class="relative inline-block text-left">
@@ -109,7 +111,6 @@
                         </div>
                     </div>
 
-<!-- TEAM RESOURCES DROPDOWN MENU -->
                     <div class="relative inline-block text-left">
                         <button id="teamMenuBtn" class="text-blue-400 hover:text-white transition-colors flex items-center gap-1 tracking-wider focus:outline-none">
                             <span>Team Resources</span>
@@ -120,23 +121,23 @@
                                 SDR Resources
                             </button>
                             <button onclick="navigateToView('ae')" class="w-full text-left px-4 py-2 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-[#00F5D4] transition-colors font-bold tracking-wider block mb-1">
-    AE Resources
-</button>
+                                AE Resources
+                            </button>
                             <button onclick="navigateToView('csm')" class="w-full text-left px-4 py-2 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-[#00F5D4] transition-colors font-bold tracking-wider block mb-1">
-    CSM Resources
-</button>
+                                CSM Resources
+                            </button>
                             <button onclick="scrollToMenu('team')" class="w-full text-left px-4 py-2 text-[11px] text-slate-500 hover:bg-slate-800 hover:text-white transition-colors font-bold tracking-wider block">
                                 Full Team Panel
                             </button>
                         </div>
-                    </div>                 <!-- CORE PRODUCTS DROPDOWN MENU -->
+                    </div>
+
                     <div class="relative inline-block text-left">
                         <button id="coreMenuBtn" class="text-purple-400 hover:text-white transition-colors flex items-center gap-1 tracking-wider focus:outline-none">
                             <span>Core Products</span>
                             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div id="coreMenuDropdown" class="hidden absolute left-0 mt-2 w-48 bg-[#0C1222] border border-slate-800 rounded-xl shadow-2xl py-1 z-50">
-                            <!-- This is the button that triggers the navigate page swap -->
                             <button onclick="navigateToView('mycm')" class="w-full text-left px-4 py-2 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-[#00F5D4] transition-colors font-bold tracking-wider block mb-1">
                                 myCM Case Management
                             </button>
@@ -156,7 +157,7 @@
             </div>
         </header>
 
-        <main class="relative w-full rounded-3xl bg-[#0C1222]/90 border border-slate-800 p-8 md:p-14 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.6)] backdrop-blur-md z-10 w-full">
+        <main class="relative w-full rounded-3xl bg-[#0C1222]/90 border border-slate-800 p-8 md:p-14 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.6)] backdrop-blur-md z-10">
             <div class="absolute inset-0 matrix-grid-effect pointer-events-none z-0 opacity-45"></div>
             <div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-blue-600/5 blur-[90px] pointer-events-none"></div>
             <div class="absolute top-20 right-1/4 w-96 h-96 rounded-full bg-purple-600/5 blur-[100px] pointer-events-none anim-pulse"></div>
@@ -173,37 +174,54 @@
                         </h1>
                     </div>
                     <div class="space-y-4 text-slate-300 text-sm leading-relaxed max-w-xl">
-                        <p>Welcome to your central hub for all things Ethico. You will find marketing assets, team-specific resources, product information, current campaigns, internal tools, and tech stack support all in one place. Use the top nav menu or the search icon in the top right corner of the site to quickly find what you need.</p>
+                        <p>Welcome to your central hub for all things Ethico. You will find marketing assets, team-specific resources, product information, current campaigns, internal tools, and tech stack support all in one place.</p>
                         <div class="bg-slate-950/40 border border-slate-800/80 p-4 rounded-xl backdrop-blur-sm">
-                            <p class="text-xs text-slate-400 font-mono">💡 <span class="text-slate-200">Missing something or have a resource you want added?</span> Reach out to RevOps with any suggestions via Slack <span class="text-[#00F5D4] font-bold">#revops-requests</span> to help keep the Hub immaculate.</p>
+                            <p class="text-xs text-slate-400 font-mono">💡 <span class="text-slate-200">Missing something or have a resource you want added?</span> Reach out to RevOps with any suggestions via Slack <span class="text-[#00F5D4] font-bold">#revops-requests</span>.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="lg:col-span-6 relative w-full pt-6 lg:pt-0">
-                    <div class="w-full bg-[#111827]/90 rounded-2xl border border-slate-700/50 shadow-2xl p-4 backdrop-blur-xl relative">
+                <div class="lg:col-span-6 relative w-full pt-6 lg:pt-0 min-h-[320px] flex items-center justify-center">
+                    <!-- HARDCODED FLOATING VECTOR LAYER DECK -->
+                    <div class="w-full max-w-md bg-[#111827]/90 rounded-2xl border border-slate-700/50 shadow-2xl p-5 backdrop-blur-xl relative">
                         <div class="flex justify-between items-center pb-3 border-b border-slate-800/80 text-[10px] font-mono text-slate-500">
                             <div class="flex items-center gap-2">
                                 <span class="h-1.5 w-1.5 rounded-full bg-blue-400"></span>
-                                <span class="h-1.5 w-1.5 rounded-full bg-purple-400">✦</span>
-                                <span class="text-slate-400 font-semibold uppercase tracking-wider ml-1">Activation_Core_Matrix</span>
+                                <span class="text-slate-400 font-semibold uppercase tracking-wider">Activation_Core_Matrix</span>
                             </div>
-                            <span class="text-[#00F5D4] bg-[#00F5D4]/10 px-2 py-0.5 rounded border border-[#00F5D4]/20 uppercase text-[9px]">Platform Live</span>
+                            <span class="text-[#00F5D4] bg-[#00F5D4]/10 px-2 py-0.5 rounded border border-[#00F5D4]/20 uppercase text-[9px]">Live Stream</span>
                         </div>
-                        <div class="grid grid-cols-12 gap-3 mt-4 text-left font-mono">
-                            <div class="col-span-12 sm:col-span-7 bg-slate-950/90 border border-slate-800 rounded-xl p-3.5 space-y-2 h-[160px] flex flex-col justify-between">
-                                <div class="text-[9px] font-bold text-slate-500 uppercase border-b border-slate-900 pb-1">Active Pipeline Index</div>
-                                <div class="space-y-1 text-[10px] text-slate-400">
-                                    <div class="flex justify-between items-center bg-slate-900/60 p-1 rounded"><span>⚡ Product_Launch_2026</span><span class="text-[#00F5D4]">ACTIVE</span></div>
-                                    <div class="flex justify-between items-center bg-slate-900/40 p-1 rounded"><span>📋 Nurture_Campaign_Q2</span><span class="text-blue-400">STABLE</span></div>
+                        
+                        <!-- Floating Callout Nodes over hardcoded layers -->
+                        <div class="relative mt-6 space-y-3 h-48">
+                            <!-- Base System Vector Frame -->
+                            <div class="absolute inset-0 bg-slate-950/60 border border-slate-800 rounded-xl p-4 flex flex-col justify-between font-mono">
+                                <div class="flex justify-between items-center text-[10px] text-slate-500 border-b border-slate-900 pb-2">
+                                    <span>SYSTEM_NODE // REVOPS</span>
+                                    <span class="text-purple-400">SYS_OK</span>
                                 </div>
+                                <div class="space-y-1.5 py-4">
+                                    <div class="w-full h-1 bg-slate-800 rounded"></div>
+                                    <div class="w-5/6 h-1 bg-slate-800 rounded"></div>
+                                    <div class="w-2/3 h-1 bg-slate-800 rounded"></div>
+                                </div>
+                                <div class="text-[9px] text-slate-600">ID: 0x8F94D2A // CODENAME_ETHEL</div>
                             </div>
-                            <div class="col-span-12 sm:col-span-5 bg-slate-950/40 border border-slate-800 p-3.5 rounded-xl flex flex-col justify-between items-center text-center h-[160px]">
-                                <span class="text-[8px] font-bold text-slate-500 uppercase">Operational Tech</span>
-                                <div class="my-auto space-y-1">
-                                    <div class="text-lg font-bold text-white tracking-tight leading-none">12 Assets</div>
-                                    <div class="text-[9px] text-[#00F5D4] bg-[#00F5D4]/5 px-2 py-0.5 rounded border border-[#00F5D4]/10 uppercase font-mono">Verified Stack</div>
+
+                            <!-- Floating Callout Element A (Benchmark Asset Vector) -->
+                            <div class="absolute -top-4 -left-6 bg-slate-900/95 border border-slate-700/60 shadow-xl rounded-xl p-2.5 flex items-center gap-2.5 max-w-[200px] anim-float z-20">
+                                <div class="p-1.5 bg-[#00F5D4]/10 border border-[#00F5D4]/20 text-[#00F5D4] rounded-lg">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002-2z"></path></svg>
                                 </div>
+                                <div class="text-[9px] font-mono tracking-tight text-left"><span class="text-white block font-bold">2026_Report</span><span class="text-slate-500 text-[8px]">1M+ Points Live</span></div>
+                            </div>
+
+                            <!-- Floating Callout Element B (Platform Core Vector) -->
+                            <div class="absolute -bottom-2 -right-6 bg-slate-900/95 border border-slate-700/60 shadow-xl rounded-xl p-2.5 flex items-center gap-2.5 max-w-[200px] anim-float z-20" style="animation-delay: 3s;">
+                                <div class="p-1.5 bg-purple-500/10 border border-purple-500/20 text-purple-400 rounded-lg">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+                                </div>
+                                <div class="text-[9px] font-mono tracking-tight text-left"><span class="text-white block font-bold">myCM_Engine</span><span class="text-[#00F5D4] text-[8px]">Active Status</span></div>
                             </div>
                         </div>
                     </div>
@@ -211,108 +229,7 @@
             </div>
         </main>
 
-        <section id="navigator-section" class="w-full bg-[#0C1222]/80 border border-slate-800 rounded-3xl p-6 md:p-10 shadow-xl backdrop-blur-md text-left space-y-6 z-10">
-            <div>
-                <span class="text-xs font-bold uppercase tracking-widest text-[#00F5D4]">Your Guide to Success</span>
-                <h2 class="text-2xl font-bold text-white tracking-tight mt-0.5 font-heading">Activation Resource Navigator</h2>
-            </div>
-            <div class="space-y-4">
-                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 md:p-5">
-                    <button onclick="navigateToView('essentials')" class="w-full flex justify-between items-center text-left focus:outline-none group">
-                        <div class="flex items-center gap-3.5">
-                            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 text-[#00F5D4] shadow-inner group-hover:border-[#00F5D4]/30 transition-all">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
-                            </div>
-                            <div>
-                                <h3 class="text-sm font-bold text-white uppercase tracking-wider font-heading group-hover:text-[#00F5D4] transition-colors">Ethico Essentials</h3>
-                                <p class="text-xs text-slate-500 font-mono mt-0.5">Foundational organization blueprints and operational mappings (Direct Access)</p>
-                            </div>
-                        </div>
-                        <span class="text-xs font-mono text-[#00F5D4] border border-[#00F5D4]/20 bg-[#00F5D4]/5 px-2.5 py-1 rounded-lg uppercase tracking-wider">Open Page ➔</span>
-                    </button>
-                </div>
-
-                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 md:p-5">
-                    <div class="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
-                        <div class="flex items-center gap-3.5">
-                            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 text-[#00F5D4] shadow-inner">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <div>
-                                <h3 class="text-sm font-bold text-white font-heading tracking-wide">Benchmark Content</h3>
-                                <p class="text-xs text-slate-400 font-mono mt-0.5">Subcategories: 2026 Benchmark Report, Episode Sessions, Cheat Sheets</p>
-                            </div>
-                        </div>
-                        <button onclick="navigateToView('benchmark')" class="text-xs font-mono text-teal-400 border border-teal-500/20 bg-teal-500/5 px-4 py-2 rounded-xl uppercase tracking-wider hover:bg-teal-500 hover:text-slate-950 transition-all text-center shrink-0">
-                            VIEW BENCHMARKS ➔
-                        </button>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 md:p-5">
-                    <div class="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
-                        <div class="flex items-center gap-3.5">
-                            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 text-[#00F5D4] shadow-inner">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <div>
-                                <h3 class="text-sm font-bold text-white font-heading tracking-wide">Marketing Collateral</h3>
-                                <p class="text-xs text-slate-400 font-mono mt-0.5">Subcategories: Resource Kits, Sales Enablement Library Vaults, Audio Media</p>
-                            </div>
-                        </div>
-                        <button onclick="navigateToView('collateral')" class="text-xs font-mono text-teal-400 border border-teal-500/20 bg-teal-500/5 px-4 py-2 rounded-xl uppercase tracking-wider hover:bg-teal-500 hover:text-slate-950 transition-all text-center shrink-0">
-                            VIEW COLLATERAL ➔
-                        </button>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 md:p-5">
-                    <button onclick="toggleDropdownPane('team')" class="w-full flex justify-between items-center text-left focus:outline-none group">
-                        <div class="flex items-center gap-3.5">
-                            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 text-blue-400 shadow-inner group-hover:border-blue-500/30 transition-all">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                            </div>
-                            <div>
-                                <h3 class="text-sm font-bold text-white uppercase tracking-wider font-heading">Team Resources</h3>
-                                <p class="text-xs text-slate-500 font-mono mt-0.5">Subcategories: SDR Resources, AE Resources, CSM Resources</p>
-                            </div>
-                        </div>
-                        <svg id="chevron-team" class="w-5 h-5 text-slate-500 chevron-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-<div id="panel-team" class="category-dropdown-pane space-y-4">
-    <div class="h-px bg-slate-800/60 my-2"></div>
-    <div class="grid sm:grid-cols-3 gap-4">
-        
-        <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800 space-y-2 flex flex-col justify-between">
-            <div>
-                <h4 class="text-xs font-bold uppercase tracking-wider text-blue-400 font-heading">SDR Resources</h4>
-                <p class="text-[11px] font-mono text-slate-400">Outbound call tracking scripts, cold sequencing copy templates, and customer discovery guides.</p>
-            </div>
-            <button onclick="navigateToView('sdr')" class="text-[10px] text-[#00F5D4] text-left hover:underline uppercase font-mono tracking-widest mt-2 block">
-                Explore Dashboards ➔
-            </button>
-        </div>                </div>
-
-                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 md:p-5">
-                    <button onclick="toggleDropdownPane('core')" class="w-full flex justify-between items-center text-left focus:outline-none group">
-                        <div class="flex items-center gap-3.5">
-                            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 text-purple-400 shadow-inner group-hover:border-purple-500/30 transition-all">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2M0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                            </div>
-                            <div>
-                                <h3 class="text-sm font-bold text-white uppercase tracking-wider font-heading">Core Products</h3>
-                                <p class="text-xs text-slate-500 font-mono mt-0.5">Subcategories: myCM Case Management, Hotline, MyComplianceReport, SanctionCheck, Policy+</p>
-                            </div>
-                        </div>
-                        <svg id="chevron-core" class="w-5 h-5 text-slate-500 chevron-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div id="panel-core" class="category-dropdown-pane space-y-3"><div class="h-px bg-slate-800/60 my-2"></div><span class="text-[10px] font-mono text-purple-400 uppercase block font-bold mb-1">Primary Product Suites</span><div class="flex flex-wrap gap-2.5 font-mono text-[11px]"><div class="px-3 py-2 bg-slate-950 border border-slate-800 rounded-xl"><button onclick="navigateToView('mycm')" class="px-3 py-2 bg-slate-950 border border-slate-800 hover:border-purple-500/40 text-slate-300 hover:text-white rounded-xl transition-colors">
-    myCM Case Management
-</button></div><div class="px-3 py-2 bg-slate-950 border border-slate-800 rounded-xl">Hotline Suite</div><div class="px-3 py-2 bg-slate-950 border border-slate-800 rounded-xl">MyComplianceReport</div><div class="px-3 py-2 bg-slate-950 border border-slate-800 rounded-xl">SanctionCheck ECOcheck</div><div class="px-3 py-2 bg-slate-950 border border-purple-900/40 rounded-xl"><span class="text-[#00F5D4] mr-1.5">✦</span> Policy+ Management Automation</div></div></div>
-                </div>
-            </div>
-        </section>
-
+     
         <footer class="w-full border-t border-slate-800 bg-[#0C1222]/40 rounded-3xl p-8 flex flex-col space-y-6 sm:space-y-0 sm:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-mono relative z-10">
             <div class="flex flex-col space-y-2 text-center sm:text-left">
                 <div class="flex items-center justify-center sm:justify-start space-x-2">
@@ -2216,9 +2133,9 @@
         </footer>
     </div>
 <!-- ========================================== -->
-    <!-- VIEW: myCM CASE MANAGEMENT (REFRESHED CORE)-->
+    <!-- VIEW: myCM CASE MANAGEMENT (DYNAMIC VAULT) -->
     <!-- ========================================== -->
-    <div id="view-mycm" class="w-full max-w-7xl flex flex-col items-center space-y-16 hidden pt-0 mt-0 text-left">
+    <div id="view-mycm" class="w-full max-w-7xl flex flex-col items-center space-y-20 hidden pt-0 mt-0 text-left">
         
         <header class="w-full border-b border-slate-800 bg-[#0C1222]/80 backdrop-blur-md rounded-2xl px-6 md:px-8 py-4 flex justify-between items-center sticky top-4 z-50 shadow-lg shadow-black/30">
             <div class="flex items-center space-x-3">
@@ -2237,230 +2154,276 @@
             </div>
         </header>
 
-        <!-- DYNAMIC SPECIFICATION HERO UNIT -->
-        <section class="relative w-full rounded-3xl bg-slate-50 border border-slate-200 p-8 md:p-14 overflow-hidden shadow-xl z-10 text-slate-950">
-            <div class="grid lg:grid-cols-12 gap-12 items-center relative z-10">
-                <div class="lg:col-span-7 space-y-6 text-left">
-                    <div class="inline-flex items-center gap-2 bg-slate-200/80 border border-slate-300 px-3.5 py-1.5 rounded-full">
-                        <span class="h-2 w-2 rounded-full bg-purple-600 animate-pulse"></span>
-                        <span class="text-[10px] font-mono font-bold tracking-widest text-slate-700 uppercase">Primary Core Application Suite</span>
-                    </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight uppercase leading-none font-heading">
-                        myCM Management<span class="text-purple-600">.</span>
-                    </h1>
-                    <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-xl font-normal">
-                        Central intelligence node for case monitoring ecosystems, substantiation workflows, and risk intelligence reporting parameters. Monitor and triage organizational insights natively.
-                    </p>
-                </div>
+        <!-- DISTINCT DARK MODE HERO BLOCK WITH HARDCODED DEEP COLORFUL WAVEFORM BACKGROUND -->
+        <section class="relative w-full rounded-3xl bg-[#070B19] border border-slate-800/80 px-8 py-16 md:p-16 overflow-hidden shadow-2xl z-10">
+            <!-- HARDCODED SVG BACKGROUND DYNAMIC WAVEFORM LAYER -->
+            <div class="absolute inset-0 z-0 opacity-40 pointer-events-none mix-blend-screen scale-105">
+                <svg class="w-full h-full" viewBox="0 0 1440 400" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 200C120 130 240 80 360 120C480 160 600 240 720 260C840 280 960 210 1080 160C1200 110 1320 80 1440 50V400H0V200Z" fill="url(#hero-gradient-wave-1)"/>
+                    <path d="M0 280C150 240 300 140 450 150C600 160 750 280 900 270C1050 260 1200 130 1350 110C1380 105 1410 105 1440 108V400H0V280Z" fill="url(#hero-gradient-wave-2)" opacity="0.6"/>
+                    <defs>
+                        <linearGradient id="hero-gradient-wave-1" x1="0" y1="0" x2="1440" y2="400" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.2"/>
+                            <stop offset="50%" stop-color="#7C3AED" stop-opacity="0.15"/>
+                            <stop offset="100%" stop-color="#00F5D4" stop-opacity="0.05"/>
+                        </linearGradient>
+                        <linearGradient id="hero-gradient-wave-2" x1="1440" y1="0" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#9333EA" stop-opacity="0.2"/>
+                            <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
 
-                <!-- CODESIDE HARDCODED PLATFORM INTERFACE GRAPHIC -->
-                <div class="lg:col-span-5 w-full hidden md:flex items-center justify-center relative min-h-[260px] paper-stack-perspective">
-                    <div class="absolute w-64 h-64 rounded-full bg-gradient-to-tr from-purple-400/20 via-indigo-300/10 to-transparent blur-2xl pointer-events-none z-0"></div>
-                    <div class="absolute w-[260px] h-[160px] bg-[#0C1222] border border-slate-800 rounded-xl shadow-2xl p-4 flex flex-col justify-between text-left">
-                        <div class="flex items-center gap-1.5 border-b border-slate-800 pb-2 text-[8px] font-mono text-slate-400">
-                            <span class="h-1.5 w-1.5 rounded-full bg-purple-500 animate-pulse"></span>
-                            <span>CASE_VAL_STREAM: SYSTEM_LIVE</span>
-                        </div>
-                        <div class="space-y-1.5 my-auto">
-                            <div class="w-full h-2 bg-slate-950 rounded overflow-hidden flex items-center px-1 font-mono text-[6px] text-purple-400 justify-between"><span>📋 Case #2026-A</span><span class="text-emerald-400">SUBSTANTIATED</span></div>
-                            <div class="w-5/6 h-2 bg-slate-950 rounded overflow-hidden flex items-center px-1 font-mono text-[6px] text-purple-400 justify-between"><span>📋 Case #2026-B</span><span class="text-blue-400">IN_PROGRESS</span></div>
-                        </div>
-                        <div class="w-full h-1.5 bg-slate-950 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-600 to-indigo-500" style="width: 89%"></div></div>
-                    </div>
+            <div class="relative z-10 max-w-3xl space-y-4">
+                <div class="inline-flex items-center gap-2 bg-purple-950/40 border border-purple-800/40 px-3 py-1.5 rounded-full">
+                    <span class="h-2 w-2 rounded-full bg-purple-500 animate-pulse"></span>
+                    <span class="text-[10px] font-mono font-bold tracking-widest text-purple-300 uppercase">System Intelligence Stack</span>
                 </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight uppercase leading-none font-heading">
+                    MYCM CASE MANAGEMENT<span class="text-purple-500">.</span>
+                </h1>
             </div>
         </section>
 
-        <!-- TWO COLUMN INTERACTION ENGINE -->
-        <div class="w-full grid lg:grid-cols-12 gap-12 items-start relative z-10 text-left">
-            
-            <!-- LEFT COLUMN: SIDEBAR FILTERS & PLATFORM PORTAL -->
-            <aside class="lg:col-span-3 space-y-6 lg:sticky lg:top-28">
-                <!-- Anchor Module Block -->
-                <div class="bg-gradient-to-b from-[#0C1222] to-[#090D1A] border border-slate-800/80 p-5 rounded-2xl space-y-4 shadow-xl">
-                    <div class="flex justify-between items-center border-b border-slate-800 pb-2 text-[9px] font-mono tracking-wider text-slate-500">
-                        <span>LIVE DASHBOARD LINK</span>
-                        <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    </div>
-                    <div class="space-y-2">
-                        <span class="text-sm font-bold text-white font-heading block leading-tight">myComplianceManagement (myCM) Login Page</span>
-                        <p class="text-slate-400 font-sans font-light text-[11px] leading-relaxed">
-                            Ethico's central risk repository. Centralize cases from all entry sources, log end-to-end investigation parameters, and evaluate deep program metrics within a secure system of record.
-                        </p>
-                    </div>
-                    <a href="https://app.mycompliancemanagement.com/login" target="_blank" class="block w-full text-center py-3 bg-purple-600 hover:bg-purple-500 text-white font-mono font-bold text-xs uppercase tracking-widest rounded-xl transition-all shadow-md border border-purple-500/20">
-                        Launch Software ↗
-                    </a>
+        <div class="w-full grid lg:grid-cols-12 gap-12 items-start relative z-10 text-left mt-6">
+            <!-- Left Action Hub Rail Column -->
+            <aside class="lg:col-span-3 bg-gradient-to-b from-[#0C1222] to-[#080D1A] border border-slate-800/80 p-6 rounded-2xl space-y-5 shadow-xl lg:sticky lg:top-28">
+                <div class="flex justify-between items-center border-b border-slate-800 pb-2 text-[9px] font-mono tracking-wider text-slate-500">
+                    <span>LIVE PLATFORM PORTAL</span>
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
                 </div>
-
-                <div class="bg-slate-950/40 border border-slate-800/80 p-4 rounded-xl hidden lg:block font-mono text-[10px] tracking-wide text-slate-400 uppercase font-bold">
-                    <button onclick="document.getElementById('internal-mycm-sec').scrollIntoView({behavior: 'smooth'})" class="w-full text-left p-2 rounded hover:bg-slate-900/60 hover:text-white transition-all block mb-1">🔒 Internal Blueprints</button>
-                    <button onclick="document.getElementById('external-mycm-sec').scrollIntoView({behavior: 'smooth'})" class="w-full text-left p-2 rounded hover:bg-slate-900/60 hover:text-white transition-all block">🌐 External Collateral</button>
+                <div class="space-y-3">
+                    <span class="text-sm font-bold text-white font-heading block leading-tight">myComplianceManagement Login</span>
+                    <p class="text-slate-400 font-sans font-light text-[11px] leading-relaxed">
+                        Ethico's flagship solution portal. Centralize case metrics inputs, triage incoming hotline data fields, and execute protected audits safely inside a secure environment.
+                    </p>
                 </div>
+                <a href="https://app.mycompliancemanagement.com/login" target="_blank" class="block w-full text-center {{ btn }} py-3 bg-purple-600 hover:bg-purple-500 text-white font-mono font-bold text-xs uppercase tracking-widest rounded-xl transition-all shadow-md border border-purple-500/20">
+                    Launch Software ↗
+                </a>
             </aside>
 
-            <!-- RIGHT COLUMN: MULTI-VARIATION RESOURCE SECTIONS -->
-            <div class="lg:col-span-9 space-y-16 w-full">
+            <!-- Right Spaced Resource Column -->
+            <div class="lg:col-span-9 space-y-20 w-full">
                 
-                <!-- STYLE VARIATION A: INTERNAL BLUEPRINTS (TECHNICAL / MINIMAL GLASS) -->
-                <section id="internal-mycm-sec" class="space-y-6">
+                <!-- INTERNAL VAULT RESOURCES -->
+                <section id="internal-mycm-sec" class="space-y-8">
                     <div class="border-b border-purple-900/40 pb-3 flex items-center justify-between">
-                        <h3 class="text-lg font-bold text-white font-heading uppercase tracking-wider flex items-center gap-2">
-                            <span class="text-purple-400">🔒</span> Internal myCM Resources
+                        <h3 class="text-base font-bold text-white font-heading uppercase tracking-wider flex items-center gap-2">
+                            <span class="text-purple-500">🔒</span> Internal myCM Resources
                         </h3>
-                        <span class="font-mono text-[9px] uppercase tracking-widest border border-purple-800/40 bg-purple-950/40 px-2.5 py-0.5 rounded text-purple-300">Vault Secured</span>
+                        <span class="font-mono text-[9px] uppercase tracking-widest text-purple-400 bg-purple-950/40 px-2 rounded">Internal Access Only</span>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <!-- Technical Blueprint Blueprint Card -->
-                        <div class="bg-slate-950/40 border border-slate-800/80 p-5 rounded-2xl flex flex-col justify-between space-y-4 hover:border-purple-500/30 transition-all group">
-                            <div class="space-y-2">
-                                <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
-                                    <span>REF_ID: VISUAL_OVERVIEW</span>
-                                    <span>PDF_DOC</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Resource 1 -->
+                        <div class="bg-slate-950/40 border border-slate-800/80 p-6 rounded-2xl flex flex-col justify-between space-y-6 hover:border-purple-500/30 transition-all group shadow-md">
+                            <div class="space-y-4">
+                                <div class="p-3 bg-slate-900/80 border border-slate-800 rounded-xl text-purple-400 w-11 h-11 flex items-center justify-center">
+                                    <!-- Hardcoded SVG Dossier/Paper Icon -->
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                                 </div>
-                                <h4 class="text-sm font-bold text-white font-heading uppercase tracking-wide group-hover:text-purple-400 transition-colors">myCM Tiers at a Glance</h4>
-                                <p class="text-slate-400 font-light text-xs leading-relaxed">An internal reference visual giving a high-level overview of Ethico's myCM Basic, Essential, and Professional tiers. Use this to quickly orient yourself on the key distinctions between plans so you can confidently guide prospects toward the right configuration option.</p>
+                                <div class="space-y-1">
+                                    <h4 class="text-sm font-bold text-white font-heading uppercase tracking-wide group-hover:text-purple-400 transition-colors">myCM Tiers at a Glance</h4>
+                                    <p class="text-slate-400 font-light text-xs leading-relaxed">An internal reference visual giving a high-level overview of Ethico's myCM Basic, Essential, and Professional tiers. Use this to orient yourself on target tier plans quickly.</p>
+                                </div>
                             </div>
                             <a href="https://drive.google.com/file/d/1Y5CbCp0qC83XZrkVJMOpsnX7kBMXccrV/view" target="_blank" class="text-xs font-mono font-bold text-purple-400 hover:underline">Access Asset File ➔</a>
                         </div>
 
-                        <!-- Technical Blueprint Comparison Card -->
-                        <div class="bg-slate-950/40 border border-slate-800/80 p-5 rounded-2xl flex flex-col justify-between space-y-4 hover:border-purple-500/30 transition-all group">
-                            <div class="space-y-2">
-                                <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
-                                    <span>REF_ID: TIER_MATRIX</span>
-                                    <span>XL_SHEET</span>
+                        <!-- Resource 2 -->
+                        <div class="bg-slate-950/40 border border-slate-800/80 p-6 rounded-2xl flex flex-col justify-between space-y-6 hover:border-purple-500/30 transition-all group shadow-md">
+                            <div class="space-y-4">
+                                <div class="p-3 bg-slate-900/80 border border-slate-800 rounded-xl text-purple-400 w-11 h-11 flex items-center justify-center">
+                                    <!-- Hardcoded SVG Grid Matrix Icon -->
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                                 </div>
-                                <h4 class="text-sm font-bold text-white font-heading uppercase tracking-wide group-hover:text-purple-400 transition-colors">myCM Tier Comparison Table</h4>
-                                <p class="text-slate-400 font-light text-xs leading-relaxed">An internal reference graphic providing a detailed breakdown of what's included and excluded across each myCM service tier. Use this as a deeper resource when advising prospects and clients, helping you match plans to desired outcomes with confidence.</p>
+                                <div class="space-y-1">
+                                    <h4 class="text-sm font-bold text-white font-heading uppercase tracking-wide group-hover:text-purple-400 transition-colors">myCM Tier Comparison Table</h4>
+                                    <p class="text-slate-400 font-light text-xs leading-relaxed">Detailed reference matrix illustrating module setups across each system tier. Use this when diving into deep system scope consultations cleanly.</p>
+                                </div>
                             </div>
-                            <a href="https://drive.google.com/file/d/1jlA28_LbV_co2KiXFW9ETz37JJu0xL9R/view" target="_blank" class="text-xs font-mono font-bold text-purple-400 hover:underline">Access Ledger Grid ➔</a>
+                            <a href="https://drive.google.com/file/d/1jlA28_LbV_co2KiXFW9ETz37JJu0xL9R/view" target="_blank" class="text-xs font-mono font-bold text-purple-400 hover:underline">Access Ledger Matrix ➔</a>
                         </div>
 
-                        <!-- Technical Blueprint Positioning Card 1 -->
-                        <div class="bg-slate-950/40 border border-slate-800/80 p-5 rounded-2xl flex flex-col justify-between space-y-4 hover:border-purple-500/30 transition-all group">
-                            <div class="space-y-2">
-                                <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
-                                    <span>REF_ID: EXECUTION_PITCH</span>
-                                    <span>DOC_WORKSPACE</span>
+                        <!-- Resource 3 -->
+                        <div class="bg-slate-950/40 border border-slate-800/80 p-6 rounded-2xl flex flex-col justify-between space-y-6 hover:border-purple-500/30 transition-all group shadow-md">
+                            <div class="space-y-4">
+                                <div class="p-3 bg-slate-900/80 border border-slate-800 rounded-xl text-purple-400 w-11 h-11 flex items-center justify-center">
+                                    <!-- Hardcoded SVG Blueprint Strategy Icon -->
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
                                 </div>
-                                <h4 class="text-sm font-bold text-white font-heading uppercase tracking-wide group-hover:text-purple-400 transition-colors">myCM Product Positioning Guide</h4>
-                                <p class="text-slate-400 font-light text-xs leading-relaxed">What's this? Use this guide to effectively position myCM in your conversations with prospects and clients, leveraging specialized talking paths and clear software differentiator nodes.</p>
+                                <div class="space-y-1">
+                                    <h4 class="text-sm font-bold text-white font-heading uppercase tracking-wide group-hover:text-purple-400 transition-colors">myCM Product Positioning Guide</h4>
+                                    <p class="text-slate-400 font-light text-xs leading-relaxed">What's this? Use this guide to effectively position myCM in your conversations with prospects, deploying strategic messaging angles flawlessly.</p>
+                                </div>
                             </div>
-                            <a href="https://docs.google.com/document/d/1nT9_tLPtrgbwYS3M8mhoK3MqydO1KsyPyj6-aA1zXP4/edit?tab=t.0" target="_blank" class="text-xs font-mono font-bold text-purple-400 hover:underline">Open Document Portal ➔</a>
+                            <a href="https://docs.google.com/document/d/1nT9_tLPtrgbwYS3M8mhoK3MqydO1KsyPyj6-aA1zXP4/edit?tab=t.0" target="_blank" class="text-xs font-mono font-bold text-purple-400 hover:underline">Open Workspace Document ➔</a>
                         </div>
 
-                        <!-- Technical Blueprint Positioning Card 2 -->
-                        <div class="bg-slate-950/40 border border-slate-800/80 p-5 rounded-2xl flex flex-col justify-between space-y-4 hover:border-purple-500/30 transition-all group">
-                            <div class="space-y-2">
-                                <div class="flex items-center justify-between text-[9px] font-mono text-slate-500">
-                                    <span>REF_ID: RESOLUTION_PITCH</span>
-                                    <span>DOC_WORKSPACE</span>
+                        <!-- Resource 4 -->
+                        <div class="bg-slate-950/40 border border-slate-800/80 p-6 rounded-2xl flex flex-col justify-between space-y-6 hover:border-purple-500/30 transition-all group shadow-md">
+                            <div class="space-y-4">
+                                <div class="p-3 bg-slate-900/80 border border-slate-800 rounded-xl text-purple-400 w-11 h-11 flex items-center justify-center">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
                                 </div>
-                                <h4 class="text-sm font-bold text-white font-heading uppercase tracking-wide group-hover:text-purple-400 transition-colors">CAP Product Positioning Guide</h4>
-                                <p class="text-slate-400 font-light text-xs leading-relaxed">What's this? Use this guide to effectively position myCM's Corrective Action Plans (CAPs) to map out scalable post-investigation remediation workflows for compliance teams.</p>
+                                <div class="space-y-1">
+                                    <h4 class="text-sm font-bold text-white font-heading uppercase tracking-wide group-hover:text-purple-400 transition-colors">CAP Product Positioning Guide</h4>
+                                    <p class="text-slate-400 font-light text-xs leading-relaxed">Strategic playbooks focused on showcasing the long-term structural value parameters of our built-in Corrective Action Plans.</p>
+                                </div>
                             </div>
-                            <a href="https://docs.google.com/document/d/1Liu3_-vEK1SaAKnvWDpW54FiEo514UgauJDF4__oFog/edit?tab=t.0" target="_blank" class="text-xs font-mono font-bold text-purple-400 hover:underline">Open Document Portal ➔</a>
+                            <a href="https://docs.google.com/document/d/1Liu3_-vEK1SaAKnvWDpW54FiEo514UgauJDF4__oFog/edit?tab=t.0" target="_blank" class="text-xs font-mono font-bold text-purple-400 hover:underline">Open Workspace Document ➔</a>
                         </div>
                     </div>
                 </section>
 
-                <!-- STYLE VARIATION B: EXTERNAL TOOLKITS (ASYMMETRIC ACTION RAILS + HIGH CONTRAST TAGS) -->
-                <section id="external-mycm-sec" class="space-y-6">
+                <!-- EXTERNAL DELIVERY RESOURCES -->
+                <section id="external-mycm-sec" class="space-y-8">
                     <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
-                        <h3 class="text-lg font-bold text-white font-heading uppercase tracking-wider flex items-center gap-2">
-                            <span class="text-[#00F5D4]">🌐</span> External Client Deliverables
+                        <h3 class="text-base font-bold text-white font-heading uppercase tracking-wide flex items-center gap-2">
+                            <span class="text-[#00F5D4]">🌐</span> External Shareable Materials
                         </h3>
-                        <span class="font-mono text-[9px] uppercase tracking-widest text-[#00F5D4] bg-[#00F5D4]/10 border border-[#00F5D4]/20 px-2.5 py-0.5 rounded">Shareable Assets</span>
                     </div>
 
-                    <div class="space-y-4">
-                        <!-- Manual Row Layout Box -->
-                        <div class="p-5 bg-[#0C1222]/40 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-slate-700/60 transition-all">
-                            <div class="space-y-1.5 max-w-xl">
-                                <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-blue-500"></span><span class="text-xs font-bold text-white font-heading uppercase tracking-wider block">myCM User Guide</span></div>
-                                <p class="text-slate-400 text-xs font-light leading-relaxed">What's this? This is a comprehensive manual for the myCM platform that provides best practices, tips, and step-by-step instructions. This guide can be shared directly with clients to help them navigate the software effectively.</p>
+                    <div class="space-y-6 font-sans text-xs">
+                        <!-- List Item Row 1 -->
+                        <div class="p-6 bg-[#0C1222]/30 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-6 hover:border-slate-700/60 transition-all">
+                            <div class="flex items-start gap-4 max-w-2xl">
+                                <div class="p-3 bg-slate-900 text-[#00F5D4] rounded-xl border border-slate-800 shrink-0">
+                                    <!-- Hardcoded SVG Booklet Download Icon -->
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                </div>
+                                <div class="space-y-1 text-left">
+                                    <span class="text-sm font-bold text-white font-heading uppercase block tracking-wider">myCM User Guide</span>
+                                    <p class="text-slate-400 text-xs font-light leading-relaxed">Comprehensive reference manual guiding users through the myCM interface, offering setup checklists and best practices framework configurations directly.</p>
+                                </div>
                             </div>
-                            <a href="https://app.hubspot.com/documents/6396478/summary/9800604" target="_blank" class="shrink-0 font-mono text-xs font-bold text-[#00F5D4] border border-[#00F5D4]/20 bg-[#00F5D4]/5 px-4 py-2.5 rounded-xl uppercase tracking-wider text-center hover:bg-[#00F5D4] hover:text-slate-950 transition-all">Download Manual ➔</a>
+                            <a href="https://app.hubspot.com/documents/6396478/summary/9800604" target="_blank" class="shrink-0 font-mono text-xs font-bold text-[#00F5D4] border border-[#00F5D4]/20 bg-[#00F5D4]/5 px-4 py-2.5 rounded-xl uppercase tracking-wider text-center hover:bg-[#00F5D4] hover:text-slate-950 transition-all">Get Manual PDF ➔</a>
                         </div>
 
-                        <!-- Video Row Layout Box 1 -->
-                        <div class="p-5 bg-[#0C1222]/40 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-slate-700/60 transition-all">
-                            <div class="space-y-1.5 max-w-xl">
-                                <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-purple-500"></span><span class="text-xs font-bold text-white font-heading uppercase tracking-wider block">myCM Upgraded Dashboard Video</span></div>
-                                <p class="text-slate-400 text-xs font-light leading-relaxed">What's this? This video demonstrates the latest interface enhancements and dashboard functionality. It provides a visual walkthrough of how the upgraded navigation and data visualization tools improve user efficiency when managing risk data within the platform.</p>
+                        <!-- List Item Row 2 -->
+                        <div class="p-6 bg-[#0C1222]/30 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-6 hover:border-slate-700/60 transition-all">
+                            <div class="flex items-start gap-4 max-w-2xl">
+                                <div class="p-3 bg-slate-900 text-purple-400 rounded-xl border border-slate-800 shrink-0">
+                                    <!-- Hardcoded SVG Video Camera Icon -->
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div class="space-y-1 text-left">
+                                    <span class="text-sm font-bold text-white font-heading uppercase block tracking-wider">myCM Upgraded Dashboard Video</span>
+                                    <p class="text-slate-400 text-xs font-light leading-relaxed">Product demonstration screening highlighting updated navigation modules, enhanced layouts, and data analytics parsing blocks clearly.</p>
+                                </div>
                             </div>
                             <a href="https://youtube.com/watch?si=05dw1WQNl9ifv7rg&v=vYwf1QPCjGI&feature=youtu.be" target="_blank" class="shrink-0 font-mono text-xs font-bold text-purple-400 border border-purple-500/20 bg-purple-500/5 px-4 py-2.5 rounded-xl uppercase tracking-wider text-center hover:bg-purple-500 hover:text-white transition-all">Watch Media 🎥</a>
                         </div>
 
-                        <!-- Video Row Layout Box 2 -->
-                        <div class="p-5 bg-[#0C1222]/40 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-slate-700/60 transition-all">
-                            <div class="space-y-1.5 max-w-xl">
-                                <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-purple-500"></span><span class="text-xs font-bold text-white font-heading uppercase tracking-wider block">Meet Ethel! New AI Case Summaries Pager</span></div>
-                                <p class="text-slate-400 text-xs font-light leading-relaxed">Share this pager resource with prospects and clients to help them better understand how this powerful new feature works and how it can help them gain efficiency in their workflow.</p>
+                        <!-- List Item Row 3 -->
+                        <div class="p-6 bg-[#0C1222]/30 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-6 hover:border-slate-700/60 transition-all">
+                            <div class="flex items-start gap-4 max-w-2xl">
+                                <div class="p-3 bg-slate-900 text-purple-400 rounded-xl border border-slate-800 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div class="space-y-1 text-left">
+                                    <span class="text-sm font-bold text-white font-heading uppercase block tracking-wider">Meet Ethel! New AI Case Summaries Pager</span>
+                                    <p class="text-slate-400 text-xs font-light leading-relaxed">Share this sheet with clients to reveal how built-in automation logic captures metrics summaries flawlessly to increase investigative velocity records.</p>
+                                </div>
                             </div>
                             <a href="https://app.hubspot.com/documents/6396478/summary/22602523" target="_blank" class="shrink-0 font-mono text-xs font-bold text-purple-400 border border-purple-500/20 bg-purple-500/5 px-4 py-2.5 rounded-xl uppercase tracking-wider text-center hover:bg-purple-500 hover:text-white transition-all">Open Pager ➔</a>
                         </div>
 
-                        <!-- eBook Row Layout Box 1 -->
-                        <div class="p-5 bg-[#0C1222]/40 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-slate-700/60 transition-all">
-                            <div class="space-y-1.5 max-w-xl">
-                                <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-teal-500"></span><span class="text-xs font-bold text-white font-heading uppercase tracking-wider block">e-Book: Investigations Management</span></div>
-                                <p class="text-slate-400 text-xs font-light leading-relaxed">What's this? This eBook outlines how large organizations can manage high volumes of simultaneous investigations through a defined, repeatable process. It focuses on maintaining speed, objectivity, and competence.</p>
+                        <!-- List Item Row 4 -->
+                        <div class="p-6 bg-[#0C1222]/30 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-6 hover:border-slate-700/60 transition-all">
+                            <div class="flex items-start gap-4 max-w-2xl">
+                                <div class="p-3 bg-slate-900 text-[#00F5D4] rounded-xl border border-slate-800 shrink-0">
+                                    <!-- Hardcoded SVG Book Blueprint Icon -->
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                </div>
+                                <div class="space-y-1 text-left">
+                                    <span class="text-sm font-bold text-white font-heading uppercase block tracking-wider">e-Book: Investigations Management</span>
+                                    <p class="text-slate-400 text-xs font-light leading-relaxed">Corporate guidelines outlining repeatable processes used to regulate objectiveness and data integrity parameters across concurrently tracking portfolios.</p>
+                                </div>
                             </div>
                             <a href="https://app.hubspot.com/documents/6396478/summary/1731333" target="_blank" class="shrink-0 font-mono text-xs font-bold text-[#00F5D4] border border-[#00F5D4]/20 bg-[#00F5D4]/5 px-4 py-2.5 rounded-xl uppercase tracking-wider text-center hover:bg-[#00F5D4] hover:text-slate-950 transition-all">Download PDF ➔</a>
                         </div>
 
-                        <!-- eBook Row Layout Box 2 -->
-                        <div class="p-5 bg-[#0C1222]/40 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-slate-700/60 transition-all">
-                            <div class="space-y-1.5 max-w-xl">
-                                <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-teal-500"></span><span class="text-xs font-bold text-white font-heading uppercase tracking-wider block">e-Book Hotlines & Case Mgmt</span></div>
-                                <p class="text-slate-400 text-xs font-light leading-relaxed">What's this? This eBook guides compliance professionals through selecting or auditing hotline vendors. It frames the vendor relationship as a critical risk management partnership.</p>
+                        <!-- List Item Row 5 -->
+                        <div class="p-6 bg-[#0C1222]/30 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-6 hover:border-slate-700/60 transition-all">
+                            <div class="flex items-start gap-4 max-w-2xl">
+                                <div class="p-3 bg-slate-900 text-[#00F5D4] rounded-xl border border-slate-800 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                </div>
+                                <div class="space-y-1 text-left">
+                                    <span class="text-sm font-bold text-white font-heading uppercase block tracking-wider">e-Book Hotlines & Case Mgmt</span>
+                                    <p class="text-slate-400 text-xs font-light leading-relaxed">Strategic asset blueprint used by compliance experts to cleanly audit helpline vendors and establish deep program alignment indices with partners.</p>
+                                </div>
                             </div>
                             <a href="https://app.hubspot.com/documents/6396478/summary/1544748" target="_blank" class="shrink-0 font-mono text-xs font-bold text-[#00F5D4] border border-[#00F5D4]/20 bg-[#00F5D4]/5 px-4 py-2.5 rounded-xl uppercase tracking-wider text-center hover:bg-[#00F5D4] hover:text-slate-950 transition-all">Download PDF ➔</a>
                         </div>
 
-                        <!-- Checklist Row Layout Box -->
-                        <div class="p-5 bg-[#0C1222]/40 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-slate-700/60 transition-all">
-                            <div class="space-y-1.5 max-w-xl">
-                                <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-blue-400"></span><span class="text-xs font-bold text-white font-heading uppercase tracking-wider block">Case Management Vendor Checklist</span></div>
-                                <p class="text-slate-400 text-xs font-light leading-relaxed">What's this? This checklist guide outlines the streamlined steps for migrating from a legacy system to MyCM. It aims to reduce "switching friction" by demonstrating how Ethico simplifies onboarding.</p>
+                        <!-- List Item Row 6 -->
+                        <div class="p-6 bg-[#0C1222]/30 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-6 hover:border-slate-700/60 transition-all">
+                            <div class="flex items-start gap-4 max-w-2xl">
+                                <div class="p-3 bg-slate-900 text-[#00F5D4] rounded-xl border border-slate-800 shrink-0">
+                                    <!-- Hardcoded SVG Checkbox Checklist Icon -->
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                                </div>
+                                <div class="space-y-1 text-left">
+                                    <span class="text-sm font-bold text-white font-heading uppercase block tracking-wider">Case Management Vendor Checklist</span>
+                                    <p class="text-slate-400 text-xs font-light leading-relaxed">Migration tracking guide designed to outline simple structural handoff pathways for shifting account metrics over smoothly into myCM.</p>
+                                </div>
                             </div>
                             <a href="https://app.hubspot.com/documents/6396478/summary/9614458" target="_blank" class="shrink-0 font-mono text-xs font-bold text-[#00F5D4] border border-[#00F5D4]/20 bg-[#00F5D4]/5 px-4 py-2.5 rounded-xl uppercase tracking-wider text-center hover:bg-[#00F5D4] hover:text-slate-950 transition-all">Open Checklist ➔</a>
                         </div>
 
-                        <!-- Video Row Layout Box 3 -->
-                        <div class="p-5 bg-[#0C1222]/40 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-slate-700/60 transition-all">
-                            <div class="space-y-1.5 max-w-xl">
-                                <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-purple-500"></span><span class="text-xs font-bold text-white font-heading uppercase tracking-wider block">CAP Teaser Video</span></div>
-                                <p class="text-slate-400 text-xs font-light leading-relaxed">What's this? This resource outlines how CAP functionality extends the utility of myCM beyond the investigative phase. It focuses on the tools needed to assign, track, and verify post-investigation actions.</p>
+                        <!-- List Item Row 7 -->
+                        <div class="p-6 bg-[#0C1222]/30 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-6 hover:border-slate-700/60 transition-all">
+                            <div class="flex items-start gap-4 max-w-2xl">
+                                <div class="p-3 bg-slate-900 text-purple-400 rounded-xl border border-slate-800 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div class="space-y-1 text-left">
+                                    <span class="text-sm font-bold text-white font-heading uppercase block tracking-wider">CAP Teaser Video</span>
+                                    <p class="text-slate-400 text-xs font-light leading-relaxed">Brief informational presentation overviewing how the built-in Corrective Action Plans trace resolution cycles following core closures.</p>
+                                </div>
                             </div>
                             <a href="https://pages.ethico.com/hubfs/CAP%20AppCues%20Video.mp4" target="_blank" class="shrink-0 font-mono text-xs font-bold text-purple-400 border border-purple-500/20 bg-purple-500/5 px-4 py-2.5 rounded-xl uppercase tracking-wider text-center hover:bg-purple-500 hover:text-white transition-all">Play Teaser 🎥</a>
                         </div>
 
-                        <!-- Video Row Layout Box 4 -->
-                        <div class="p-5 bg-[#0C1222]/40 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-slate-700/60 transition-all">
-                            <div class="space-y-1.5 max-w-xl">
-                                <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-purple-500"></span><span class="text-xs font-bold text-white font-heading uppercase tracking-wider block">CAP Instructional Video</span></div>
-                                <p class="text-slate-400 text-xs font-light leading-relaxed">What's this? This video provides a detailed walkthrough of the Corrective Action Plan tool. It demonstrates the technical workflow for creating, assigning, and monitoring post-investigative tasks.</p>
+                        <!-- List Item Row 8 -->
+                        <div class="p-6 bg-[#0C1222]/30 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-6 hover:border-slate-700/60 transition-all">
+                            <div class="flex items-start gap-4 max-w-2xl">
+                                <div class="p-3 bg-slate-900 text-purple-400 rounded-xl border border-slate-800 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div class="space-y-1 text-left">
+                                    <span class="text-sm font-bold text-white font-heading uppercase block tracking-wider">CAP Instructional Video</span>
+                                    <p class="text-slate-400 text-xs font-light leading-relaxed">Step-by-step training playbook screen record video demonstrating how to accurately set up and delegate action layouts perfectly.</p>
+                                </div>
                             </div>
                             <a href="https://pages.ethico.com/hubfs/Action%20Plan%20Templates%20-%20Final.mp4" target="_blank" class="shrink-0 font-mono text-xs font-bold text-purple-400 border border-purple-500/20 bg-purple-500/5 px-4 py-2.5 rounded-xl uppercase tracking-wider text-center hover:bg-purple-500 hover:text-white transition-all">Play Training 🎥</a>
                         </div>
 
-                        <!-- Video Row Layout Box 5 -->
-                        <div class="p-5 bg-[#0C1222]/40 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-slate-700/60 transition-all">
-                            <div class="space-y-1.5 max-w-xl">
-                                <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-purple-500"></span><span class="text-xs font-bold text-white font-heading uppercase tracking-wider block">Case Comms Teaser Video</span></div>
-                                <p class="text-slate-400 text-xs font-light leading-relaxed">What's this? This video offers a preview of the integrated communication tools within the platform. It highlights how investigators can securely interact with reporters and stakeholders directly inside a case.</p>
+                        <!-- List Item Row 9 -->
+                        <div class="p-6 bg-[#0C1222]/30 border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-6 hover:border-slate-700/60 transition-all">
+                            <div class="flex items-start gap-4 max-w-2xl">
+                                <div class="p-3 bg-slate-900 text-purple-400 rounded-xl border border-slate-800 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div class="space-y-1 text-left">
+                                    <span class="text-sm font-bold text-white font-heading uppercase block tracking-wider">Case Comms Teaser Video</span>
+                                    <p class="text-slate-400 text-xs font-light leading-relaxed">Functional preview outlining how investigators communicate safely with anonymous whistleblowers inside file files.</p>
+                                </div>
                             </div>
                             <a href="https://drive.google.com/file/d/1R-n03qn7m-E64SmPZEPZUVwjCVVFqrry/view" target="_blank" class="shrink-0 font-mono text-xs font-bold text-purple-400 border border-purple-500/20 bg-purple-500/5 px-4 py-2.5 rounded-xl uppercase tracking-wider text-center hover:bg-purple-500 hover:text-white transition-all">Play Teaser 🎥</a>
                         </div>
 
-                        <!-- Leave-Behind Card -->
-                        <div class="p-6 bg-[#0C1222]/80 border border-slate-800 rounded-2xl flex flex-col justify-between space-y-4 hover:border-teal-500/30 transition-all shadow-xl">
-                            <div class="space-y-2 text-left">
-                                <div class="flex justify-between items-center text-[9px] font-mono text-slate-500"><span>REF_ID: DECK_LEAVE_BEHIND</span><span>SLIDES_PRESENTATION</span></div>
+                        <!-- Full Width Leave-Behind Slide Package Card -->
+                        <div class="p-6 bg-[#0C1222]/60 border border-slate-800 rounded-2xl flex flex-col justify-between space-y-4 hover:border-teal-500/30 transition-all shadow-xl md:col-span-2">
+                            <div class="space-y-3 text-left">
+                                <div class="flex justify-between items-center text-[9px] font-mono text-slate-500">
+                                    <span>REF_ID: LEAVE_BEHIND_DECK</span>
+                                    <span>SLIDES_DECK</span>
+                                </div>
                                 <span class="text-sm font-bold font-heading text-teal-400 uppercase tracking-wider block">myCM Visual Reference: Post-Demo-Leave-Behind</span>
                                 <p class="text-slate-400 font-light text-xs leading-relaxed">This deck provides a visual walkthrough of myCM, featuring key screenshots and concise feature descriptions. Share this as a post-demo resource to provide prospects and stakeholders with a clear reference of the platform’s interface and core functionality.</p>
                             </div>
