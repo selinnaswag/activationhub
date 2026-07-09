@@ -245,8 +245,19 @@
                         </div>
                         <svg id="chevron-team" class="w-5 h-5 text-slate-500 chevron-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div id="panel-team" class="category-dropdown-pane space-y-4"><div class="h-px bg-slate-800/60 my-2"></div><div class="grid sm:grid-cols-3 gap-4"><div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800 space-y-1"><h4 class="text-xs font-bold uppercase tracking-wider text-blue-400 font-heading">SDR Resources</h4><p class="text-[11px] font-mono text-slate-400">Outbound call tracking scripts, cold sequencing copy templates, and customer discovery guides.</p></div><div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800 space-y-1"><h4 class="text-xs font-bold uppercase tracking-wider text-blue-400 font-heading">AE Resources</h4><p class="text-[11px] font-mono text-slate-400">Live AE client metrics presentations, competitor battlecards, and negotiation contract models.</p></div><div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800 space-y-1"><h4 class="text-xs font-bold uppercase tracking-wider text-blue-400 font-heading">CSM Resources</h4><p class="text-[11px] font-mono text-slate-400">Onboarding roadmap execution files, system checklists, performance optimization parameters guides.</p></div></div></div>
-                </div>
+<div id="panel-team" class="category-dropdown-pane space-y-4">
+    <div class="h-px bg-slate-800/60 my-2"></div>
+    <div class="grid sm:grid-cols-3 gap-4">
+        
+        <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800 space-y-2 flex flex-col justify-between">
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-blue-400 font-heading">SDR Resources</h4>
+                <p class="text-[11px] font-mono text-slate-400">Outbound call tracking scripts, cold sequencing copy templates, and customer discovery guides.</p>
+            </div>
+            <button onclick="navigateToView('sdr')" class="text-[10px] text-[#00F5D4] text-left hover:underline uppercase font-mono tracking-widest mt-2 block">
+                Explore Dashboards ➔
+            </button>
+        </div>                </div>
 
                 <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 md:p-5">
                     <button onclick="toggleDropdownPane('core')" class="w-full flex justify-between items-center text-left focus:outline-none group">
