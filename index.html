@@ -129,21 +129,22 @@
                                 Full Team Panel
                             </button>
                         </div>
-                    </div>                   <!-- CORE PRODUCTS DROPDOWN MENU -->
-                 <div class="relative inline-block text-left">
-                     <button id="coreMenuBtn" class="text-purple-400 hover:text-white transition-colors flex items-center gap-1 tracking-wider focus:outline-none">
-                         <span>Core Products</span>
-                         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
-                     </button>
-                     <div id="coreMenuDropdown" class="hidden absolute left-0 mt-2 w-48 bg-[#0C1222] border border-slate-800 rounded-xl shadow-2xl py-1 z-50">
-                         <button onclick="navigateToView('mycm')" class="w-full text-left px-4 py-2 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-[#00F5D4] transition-colors font-bold tracking-wider block mb-1">
-                             myCM Case Management
-                         </button>
-                         <button onclick="scrollToMenu('core')" class="w-full text-left px-4 py-2 text-[11px] text-slate-500 hover:bg-slate-800 hover:text-white transition-colors font-bold tracking-wider block">
-                             Full Products Panel
-                         </button>
-                     </div>
-                 </div>
+                    </div>                 <!-- CORE PRODUCTS DROPDOWN MENU -->
+                    <div class="relative inline-block text-left">
+                        <button id="coreMenuBtn" class="text-purple-400 hover:text-white transition-colors flex items-center gap-1 tracking-wider focus:outline-none">
+                            <span>Core Products</span>
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="coreMenuDropdown" class="hidden absolute left-0 mt-2 w-48 bg-[#0C1222] border border-slate-800 rounded-xl shadow-2xl py-1 z-50">
+                            <!-- This is the button that triggers the navigate page swap -->
+                            <button onclick="navigateToView('mycm')" class="w-full text-left px-4 py-2 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-[#00F5D4] transition-colors font-bold tracking-wider block mb-1">
+                                myCM Case Management
+                            </button>
+                            <button onclick="scrollToMenu('core')" class="w-full text-left px-4 py-2 text-[11px] text-slate-500 hover:bg-slate-800 hover:text-white transition-colors font-bold tracking-wider block">
+                                Full Products Panel
+                            </button>
+                        </div>
+                    </div>
                     <button onclick="scrollToMenu('noncore')" class="hover:text-slate-200 transition-colors">Non-Core Catalog</button>
                 </nav>
                 <div class="flex items-center space-x-3 flex-shrink-0">
