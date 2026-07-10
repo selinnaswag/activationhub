@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* Tailwind v4 needs to see the class names used in the extracted view markup */
+@source "../content";
+@source "../components";
+@source "../app";
+
+@theme {
+  --font-sans: var(--font-roboto), "Roboto", sans-serif;
+}
+
+/* ------------------------------------------------------------------ */
+/* Custom styles ported from the original single-file Activation Hub   */
+/* ------------------------------------------------------------------ */
+
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-roboto), "Roboto", sans-serif;
+  background-color: #060913;
+  scroll-behavior: smooth;
+}
+
+/* Custom Fine-Tuned Subtle Animations */
+@keyframes custom-pulse {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.01);
+  }
+}
+@keyframes float-gentle {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+@keyframes flowing-grid {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
+@keyframes wave-top-flow {
+  0%,
+  100% {
+    d: path("M 0 30 Q 300 10, 600 30 T 1200 30 L 1200 0 L 0 0 Z");
+  }
+  50% {
+    d: path("M 0 30 Q 300 50, 600 20 T 1200 40 L 1200 0 L 0 0 Z");
+  }
+}
+
+.matrix-grid-effect {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(0, 245, 212, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 245, 212, 0.04) 1px, transparent 1px);
+  animation: flowing-grid 8s linear infinite;
+}
+
+.anim-float {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+.anim-pulse {
+  animation: custom-pulse 5s ease-in-out infinite;
+}
+.wave-top-animate {
+  animation: wave-top-flow 8s ease-in-out infinite;
+}
+
+/* Dropdown transition infrastructure */
+.category-dropdown-pane {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-in-out, margin-top 0.35s ease;
+  opacity: 0;
+}
+.category-dropdown-pane.open {
+  max-height: 800px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+.chevron-icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.chevron-icon.open {
+  transform: rotate(180deg);
+}
+
+/* Isometric Stack of Papers Blueprint styling */
+.paper-stack-perspective {
+  perspective: 1200px;
+}
+.sheet-layer {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.sheet-3 {
+  transform: rotateX(28deg) rotateY(-15deg) rotateZ(2deg) translateZ(-40px) translateY(-20px);
+  opacity: 0.15;
+}
+.sheet-2 {
+  transform: rotateX(28deg) rotateY(-15deg) rotateZ(1deg) translateZ(-20px) translateY(-10px);
+  opacity: 0.4;
+}
+.sheet-1 {
+  transform: rotateX(28deg) rotateY(-15deg) rotateZ(0deg) translateZ(0px);
+}
+
+.paper-stack-perspective:hover .sheet-1 {
+  transform: rotateX(22deg) rotateY(-10deg) translateZ(20px) translateY(-5px);
+}
+.paper-stack-perspective:hover .sheet-2 {
+  transform: rotateX(22deg) rotateY(-10deg) translateZ(5px) translateY(-10px);
+  opacity: 0.6;
+}
+
+.scroll-dot-anim {
+  animation: float-gentle 2s infinite ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  .sticky-sidebar {
+    position: sticky;
+    top: 130px;
+    max-height: calc(100vh - 180px);
+  }
+}

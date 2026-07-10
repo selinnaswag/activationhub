@@ -1,0 +1,26 @@
+{
+  "homepage": {
+    "className": "w-full max-w-7xl flex flex-col items-center space-y-16"
+  },
+  "essentials": {
+    "className": "w-full max-w-7xl flex flex-col items-center space-y-24 pt-0 mt-0"
+  },
+  "benchmark": {
+    "className": "w-full max-w-7xl flex flex-col items-center space-y-24 pt-0 mt-0"
+  },
+  "collateral": {
+    "className": "w-full max-w-7xl flex flex-col items-center space-y-24 pt-0 mt-0"
+  },
+  "sdr": {
+    "className": "w-full max-w-7xl flex flex-col items-center space-y-16 pt-0 mt-0"
+  },
+  "ae": {
+    "className": "w-full max-w-7xl flex flex-col items-center space-y-16 pt-0 mt-0"
+  },
+  "csm": {
+    "className": "w-full max-w-7xl flex flex-col items-center space-y-16 pt-0 mt-0"
+  },
+  "mycm": {
+    "className": "w-full max-w-7xl flex flex-col items-center space-y-20 pt-0 mt-0 text-left"
+  }
+}
